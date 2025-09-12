@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — R Jaya Ganesh</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom (paste the CSS below into pro.css or a <style> block) -->
+  <link rel="stylesheet" href="pro.css">
+</head>
+<body class="bg-light" style="  background: linear-gradient(135deg, #f0f4f9, #e8f0ff);">
+
+    <a href="Index.html"
+   class="home-btn btn btn-primary d-inline-flex align-items-center"
+   aria-label="Go to Home">
+  <i class="bi bi-house-fill me-2" aria-hidden="true"></i>
+  <span class="btn-text">Home</span>  
+</a>
+
+
+  <!-- Optional: a simple page wrapper to match your existing sidebar layout -->
+  <div class="container-fluid vh-100 d-flex align-items-center">
+    <div class="row w-100 justify-content-center">
+      <div class="col-11 col-md-10 col-lg-8">
+
+        <!-- Card wrapper -->
+        <div class="card contact-card overflow-hidden shadow-sm">
+          <div class="row g-0">
+            <!-- Left: contact info -->
+            <div class="col-12 col-md-5 bg-info-subtle p-4 d-flex flex-column justify-content-center align-items-start">
+              <img src="Jaya.mp4" alt="profile video preview" class="d-none" />
+              <a href="Index.html"><h4 class="mb-2 fw-bold text-primary">R Jaya Ganesh</h4></a>
+              <p class="mb-1 text-muted">Java Full Stack Developer</p>
+
+              <div class="mt-3 w-100">
+                <p class="mb-1"><strong>Phone</strong></p>
+                <a class="d-inline-block contact-link mb-2" href="tel:8147130349" aria-label="Call 8147130349">
+                  <i class="bi bi-telephone-fill me-2"></i>8147130349
+                </a>
+
+                <p class="mb-1 mt-2"><strong>Email</strong></p>
+                <a class="d-inline-block contact-link" href="mailto:r.jayaganesh07@gmail.com" aria-label="Email r.jayaganesh07@gmail.com">
+                  <i class="bi bi-envelope-fill me-2"></i>r.jayaganesh07@gmail.com
+                </a>
+              </div>
+
+              <div class="mt-4 w-100">
+                <p class="mb-1"><strong>Find me</strong></p>
+                <div class="d-flex gap-3 mt-2">
+                  <a class="social-btn" href="https://www.facebook.com/share/19a3qFtyoA/" target="_blank" rel="noopener">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a class="social-btn" href="https://www.instagram.com/jaiganesh07" target="_blank" rel="noopener">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                  <a class="social-btn" href="https://www.linkedin.com/in/r-jaya-ganesh-037b86189/" target="_blank" rel="noopener">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                  <a class="social-btn" href="https://x.com/R_Jayganesh" target="_blank" rel="noopener">
+                    <i class="bi bi-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: contact form -->
+            <div class="col-12 col-md-7 p-4">
+              <div class="h-100 d-flex flex-column justify-content-center">
+                <h5 class="fw-semibold mb-3">Get in touch</h5>
+                <p class="text-muted small">Have a project or question? Send a quick message — I’ll reply soon.</p>
+
+                <form id="contactForm" class="mt-3" novalidate>
+                  <div class="mb-3">
+                    <label for="name" class="form-label small">Name</label>
+                    <input id="name" name="name" type="text" class="form-control" placeholder="Your name" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label small">Email</label>
+                    <input id="email" name="email" type="email" class="form-control" placeholder="you@example.com" required>
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="message" class="form-label small">Message</label>
+                    <textarea id="message" name="message" rows="4" class="form-control" placeholder="Brief project details or question..." required></textarea>
+                    <div class="invalid-feedback">Please enter a message.</div>
+                  </div>
+
+                  <div class="d-flex align-items-center gap-3">
+                    <button type="submit" class="btn btn-primary">Send message</button>
+                    <button type="button" id="callBtn" class="btn btn-outline-secondary" onclick="location.href='tel:8147130349'">
+                      <i class="bi bi-telephone me-1"></i>Call
+                    </button>
+                    <small class="text-muted ms-auto">Or email: <a href="mailto:r.jayaganesh07@gmail.com">r.jayaganesh07@gmail.com</a></small>
+                  </div>
+                </form>
+
+                <!-- Toast (success) -->
+                <div class="position-relative">
+                  <div id="successToast" class="toast align-items-center text-bg-success border-0 mt-3" role="status" aria-live="polite" aria-atomic="true">
+                    <div class="d-flex">
+                      <div class="toast-body">
+                        Message ready — opened your email client (or simulated send). Thanks!
+                      </div>
+                      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- end right -->
+          </div> <!-- end row -->
+        </div> <!-- end card -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (required for toast) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Small client-side behavior: validate & open mailto (no server) -->
+  <script>
+    (function () {
+      const form = document.getElementById('contactForm');
+      const toastEl = document.getElementById('successToast');
+      const toast = new bootstrap.Toast(toastEl, { delay: 3000 });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        // simple html5 validation check
+        if (!form.checkValidity()) {
+          form.classList.add('was-validated');
+          return;
+        }
+
+        // gather values
+        const name = encodeURIComponent(form.name.value.trim());
+        const email = encodeURIComponent(form.email.value.trim());
+        const message = encodeURIComponent(form.message.value.trim());
+
+        // create mailto link so user's default mail app opens (optional)
+        const subject = encodeURIComponent('Contact from portfolio: ' + name);
+        const body = encodeURIComponent(`Name: ${decodeURIComponent(name)}%0AEmail: ${decodeURIComponent(email)}%0A%0AMessage:%0A${decodeURIComponent(message)}`);
+
+        // try to open mail client
+        window.location.href = `mailto:r.jayaganesh07@gmail.com?subject=${subject}&body=${body}`;
+
+        // show confirmation toast (in case mail client didn't open)
+        toast.show();
+
+        // reset form after a small delay so toast is visible
+        setTimeout(() => {
+          form.reset();
+          form.classList.remove('was-validated');
+        }, 500);
+      });
+    })();
+  </script>
+</body>
+</html>
